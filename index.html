@@ -7,14 +7,14 @@
     
     <!-- Open Graph / Social Media Preview Metadata -->
     <meta property="og:title" content="Astroluv | Raffi's Day">
-    <meta property="og:description" content="A little universe written in the stars, dedicated entirely to the main character of my life. Happy Birthday! 🌌✨">
+    <meta property="og:description" content="A little universe written in the stars, dedicated entirely to the main character of my life. Happy Birthday!">
     <meta property="og:image" content="https://by-luneva.github.io/For_My_Special_Person/thumbnail.png">
     <meta property="og:url" content="https://by-luneva.github.io/For_My_Special_Person/">
     <meta property="og:type" content="website">
     
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Astroluv | Raffi's Day">
-    <meta name="twitter:description" content="A little universe written in the stars, dedicated entirely to the main character of my life. Happy Birthday! 🌌✨">
+    <meta name="twitter:description" content="A little universe written in the stars, dedicated entirely to the main character of my life. Happy Birthday!">
     <meta name="twitter:image" content="https://by-luneva.github.io/For_My_Special_Person/thumbnail.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -173,7 +173,7 @@
         .jar-msg { font-style: italic; color: #E7E2CE; font-size: 9.5pt; min-height: 42px; font-family: 'Comfortaa', sans-serif; margin-top: 16px; text-align: center; opacity: 0; filter: blur(5px); transition: opacity 0.5s ease, filter 0.5s ease; text-shadow: 0 0 10px rgba(231,226,206,0.45); will-change: opacity, filter; }
         .jar-msg.active { opacity: 1; filter: blur(0); }
 
-        /* ================= 10. MODALS & POPUPS (ADAPTIVE ORIGINAL SIZE PREVIEW) ================= */
+        /* ================= 10. MODALS & POPUPS ================= */
         .modal-overlay, .preview-overlay, .closing-box-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(12, 24, 58, 0.85); display: flex; align-items: center; justify-content: center; z-index: 50000; opacity: 0; pointer-events: none; transition: opacity 0.25s ease, backdrop-filter 0.25s ease; will-change: opacity; }
         .modal-overlay.active, .preview-overlay.active, .closing-box-overlay.active { opacity: 1; pointer-events: auto; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
         .custom-modal { background: rgba(255, 255, 255, 0.05); padding: 22px 18px 18px 18px; border-radius: 25px; border: 1px solid rgba(231, 226, 206, 0.25); box-shadow: 0 25px 55px rgba(0, 0, 0, 0.65); max-width: 280px; width: 85%; text-align: center; transform: scale(0.9) translateZ(0); opacity: 0; transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.25s ease; will-change: transform, opacity; }
@@ -280,20 +280,20 @@
                     <div class="orbit-system-container">
                         <div class="orbit-line-bg line-1"></div><div class="orbit-line-bg line-2"></div><div class="orbit-line-bg line-3"></div><div class="orbit-line-bg line-4"></div><div class="orbit-line-bg line-5"></div><div class="orbit-line-bg line-6"></div>
 
-                        <button id="sun-planet" class="orbit-sun-static" onclick="App.revealPlanet('Matahari: Matahari selalu datang membawa cahaya, seperti kamu yang selalu berhasil bikin hari-hariku terasa lebih berarti.', this)">
+                        <button id="sun-planet" class="orbit-sun-static" onclick="App.revealPlanet('Matahari selalu datang membawa cahaya, seperti kamu yang selalu berhasil bikin hari-hariku terasa lebih berarti.', this)">
                             <img src="planet1.png" loading="lazy" alt="Sun"><span class="orbit-label">Matahari</span>
                         </button>
 
                         <div class="orbit-rotator-wrapper">
-                            <button class="orbit-item p-mercury" onclick="App.revealPlanet('Merkurius: Merkurius adalah planet yang paling dekat dengan matahari. Kalau boleh memilih, aku juga ingin selalu dekat denganmu.', this)"><div class="orbit-inner-graphic"><img src="planet8.png" loading="lazy"><span class="orbit-label">Merkurius</span></div></button>
-                            <button class="orbit-item p-venus" onclick="App.revealPlanet('Venus: Venus dikenal sebagai salah satu objek paling terang di langit malam. Buatku, kamu juga punya cara sendiri untuk membuat hidupku terasa lebih terang.', this)"><div class="orbit-inner-graphic"><img src="planet9.png" loading="lazy"><span class="orbit-label">Venus</span></div></button>
-                            <button class="orbit-item p-earth" onclick="App.revealPlanet('Bumi: Bumi adalah tempat semua kehidupan berawal dan pulang. Aku juga ingin jadi tempat kamu pulang, kapan pun kamu membutuhkannya.', this)"><div class="orbit-inner-graphic"><img src="planet3.png" loading="lazy"><span class="orbit-label">Bumi</span></div></button>
-                            <button class="orbit-item p-moon" onclick="App.revealPlanet('Bulan: Bulan selalu menemani bumi di malam yang gelap, aku pun bakal selalu nemenin kamu di setiap fase hidupmu.', this)"><div class="orbit-inner-graphic"><img src="planet4.png" loading="lazy"><span class="orbit-label">Bulan</span></div></button>
-                            <button class="orbit-item p-mars" onclick="App.revealPlanet('Mars: Mars punya warna yang berani. Aku juga mau punya keberanian untuk tetap memilih kamu, dalam keadaan apa pun.', this)"><div class="orbit-inner-graphic"><img src="planet5.png" loading="lazy"><span class="orbit-label">Mars</span></div></button>
-                            <button class="orbit-item p-jupiter" onclick="App.revealPlanet('Jupiter: Jupiter adalah planet terbesar, tapi untukku, sebesar apa pun dunia ini, tetap nggak akan cukup untuk menggambarkan seberapa berarti kamu.', this)"><div class="orbit-inner-graphic"><img src="planet6.png" loading="lazy"><span class="orbit-label">Jupiter</span></div></button>
-                            <button class="orbit-item p-saturn" onclick="App.revealPlanet('Saturnus: Cincinnya selalu mengelilinginya. Aku pun ingin selalu berada di sisimu, bukan untuk membatasi, tapi untuk menemani.', this)"><div class="orbit-inner-graphic"><img src="planet10.png" loading="lazy"><span class="orbit-label">Saturnus</span></div></button>
-                            <button class="orbit-item p-uranus" onclick="App.revealPlanet('Uranus: Uranus berputar dengan caranya sendiri. Mungkin kita juga punya cara masing-masing dalam mencintai, tapi semoga tetap menuju satu tujuan yang sama.', this)"><div class="orbit-inner-graphic"><img src="planet2.png" loading="lazy"><span class="orbit-label">Uranus</span></div></button>
-                            <button class="orbit-item p-neptune" onclick="App.revealPlanet('Neptunus: Neptunus begitu jauh, tapi tetap menjadi bagian dari tata surya. Begitu juga kamu, sejauh apa pun jaraknya, kamu tetap menjadi bagian penting dalam hidupku.', this)"><div class="orbit-inner-graphic"><img src="planet7.png" loading="lazy"><span class="orbit-label">Neptunus</span></div></button>
+                            <button class="orbit-item p-mercury" onclick="App.revealPlanet('Merkurius adalah planet yang paling dekat dengan matahari. Kalau boleh memilih, aku juga ingin selalu dekat denganmu.', this)"><div class="orbit-inner-graphic"><img src="planet8.png" loading="lazy"><span class="orbit-label">Merkurius</span></div></button>
+                            <button class="orbit-item p-venus" onclick="App.revealPlanet('Venus dikenal sebagai salah satu objek paling terang di langit malam. Buatku, kamu juga punya cara sendiri untuk membuat hidupku terasa lebih terang.', this)"><div class="orbit-inner-graphic"><img src="planet9.png" loading="lazy"><span class="orbit-label">Venus</span></div></button>
+                            <button class="orbit-item p-earth" onclick="App.revealPlanet('Bumi adalah tempat semua kehidupan berawal dan pulang. Aku juga ingin jadi tempat kamu pulang, kapan pun kamu membutuhkannya.', this)"><div class="orbit-inner-graphic"><img src="planet3.png" loading="lazy"><span class="orbit-label">Bumi</span></div></button>
+                            <button class="orbit-item p-moon" onclick="App.revealPlanet('Bulan selalu menemani bumi di malam yang gelap, aku pun bakal selalu nemenin kamu di setiap fase hidupmu.', this)"><div class="orbit-inner-graphic"><img src="planet4.png" loading="lazy"><span class="orbit-label">Bulan</span></div></button>
+                            <button class="orbit-item p-mars" onclick="App.revealPlanet('Mars punya warna yang berani. Aku juga mau punya keberanian untuk tetap memilih kamu, dalam keadaan apa pun.', this)"><div class="orbit-inner-graphic"><img src="planet5.png" loading="lazy"><span class="orbit-label">Mars</span></div></button>
+                            <button class="orbit-item p-jupiter" onclick="App.revealPlanet('Jupiter adalah planet terbesar, tapi untukku, sebesar apa pun dunia ini, tetap nggak akan cukup untuk menggambarkan seberapa berarti kamu.', this)"><div class="orbit-inner-graphic"><img src="planet6.png" loading="lazy"><span class="orbit-label">Jupiter</span></div></button>
+                            <button class="orbit-item p-saturn" onclick="App.revealPlanet('Cincinnya selalu mengelilinginya. Aku pun ingin selalu berada di sisimu, bukan untuk membatasi, tapi untuk menemani.', this)"><div class="orbit-inner-graphic"><img src="planet10.png" loading="lazy"><span class="orbit-label">Saturnus</span></div></button>
+                            <button class="orbit-item p-uranus" onclick="App.revealPlanet('Uranus berputar dengan caranya sendiri. Mungkin kita juga punya cara masing-masing dalam mencintai, tapi semoga tetap menuju satu tujuan yang sama.', this)"><div class="orbit-inner-graphic"><img src="planet2.png" loading="lazy"><span class="orbit-label">Uranus</span></div></button>
+                            <button class="orbit-item p-neptune" onclick="App.revealPlanet('Neptunus begitu jauh, tapi tetap menjadi bagian dari tata surya. Begitu juga kamu, sejauh apa pun jaraknya, kamu tetap menjadi bagian penting dalam hidupku.', this)"><div class="orbit-inner-graphic"><img src="planet7.png" loading="lazy"><span class="orbit-label">Neptunus</span></div></button>
                         </div>
                     </div>
                     <div id="planet-text" class="planet-msg"></div>
@@ -308,7 +308,7 @@
                             <p style="margin-bottom: 14px; color: rgba(245,244,240,0.92);">On this special day, I just want you to know how grateful I am to have you in my life. Your presence has brought so many beautiful moments into my days, and somehow, everything feels a little better with you by my side.</p>
                             <p style="margin-bottom: 14px; color: rgba(245,244,240,0.92);">Thank you for every little thing you do, for your patience, your kindness, and for always being someone I can count on. I hope you never forget how special you are and how much you mean to me.</p>
                             <p style="margin-bottom: 14px; color: rgba(245,244,240,0.92);">As you turn another year older, I hope this new chapter brings you happiness, beautiful memories, and everything you've been wishing for. I’ll always be proud of the person you are and the person you’re becoming.</p>
-                            <p style="margin-bottom: 14px; font-style: italic; color: #E7E2CE; text-shadow: 0 0 6px rgba(231,226,206,0.35);">HAPPY 20TH BIRTHDAY, RAFFI. May this year be as wonderful as you deserve.</p>
+                            <p style="margin-bottom: 14px; font-style: italic; color: #E7E2CE; text-shadow: 0 0 6px rgba(231,226,206,0.35);">HAPPY 20TH BIRTHDAY, RAFFI.<br>May this year be as wonderful as you deserve.</p>
                             <div style="text-align: right; font-family: 'Cinzel', serif; font-size: 9.5pt; color: rgba(231,226,206,0.75); margin-top: 15px;">
                                 With all my love,<br><span id="letter-sender" style="font-size: 12pt; color: #E7E2CE; font-weight: 500; text-shadow: 0 0 10px rgba(231,226,206,0.45);"></span>
                             </div>
@@ -363,7 +363,7 @@
                     </div>
                 </section>
 
-                <!-- Wishes Section (Updated with non-romantic, supportive English wishes) -->
+                <!-- Wishes Section -->
                 <section>
                     <h3>Wishes From The Stars</h3>
                     <div class="cosmic-star-container" id="starContainer">
@@ -378,14 +378,14 @@
 
                 <!-- Closing Section -->
                 <section class="closing-section-box" style="border:none; text-align:center;">
-                    <p style="font-family:'Cormorant Garamond',serif; font-size:12pt; color:#E7E2CE; font-style:italic; line-height:1.8; margin-bottom:25px; text-shadow: 0 0 8px rgba(231,226,206,0.35);">"Terima kasih sudah menjadi kamu, dengan segala hal sederhana yang tanpa sadar membuatku merasa begitu beruntung bisa menjadi bagian dari hidupmu 🥰❤️."</p>
+                    <p style="font-family:'Cormorant Garamond',serif; font-size:12pt; color:#E7E2CE; font-style:italic; line-height:1.8; margin-bottom:25px; text-shadow: 0 0 8px rgba(231,226,206,0.35);">Terima kasih sudah menjadi kamu, dengan segala hal sederhana yang tanpa sadar membuatku merasa begitu beruntung bisa menjadi bagian dari hidupmu 🥰❤️.</p>
                     <button class="btn-surprise" onclick="App.toggleClosingBox(true)">Open Final Surprise</button>
                 </section>
             </div>
         </div>
     </div>
 
-    <!-- 5. OVERLAYS, MODALS & CANVAS (DI LUAR WRAPPER) -->
+    <!-- 5. OVERLAYS, MODALS & CANVAS -->
     <canvas id="confetti-canvas"></canvas>
 
     <div id="custom-alert" class="modal-overlay">
@@ -436,11 +436,10 @@
                 { title: 'Ceritaku Ceritamu', artist: 'Katyana & Nadhif Basalamah', id: 't2', cover: 'Ceritaku Ceritamu.jpg', src: 'Katyana & Nadhif Basalamah - Ceritaku Ceritamu.mp3' },
                 { title: 'Kesima', artist: 'Weswey', id: 't3', cover: 'Weswey - Kesima.jpg', src: 'Weswey - Kesima.mp3' }
             ];
-            // Wishes diubah menjadi bahasa Inggris yang bernada suportif, keren, dan non-romantis
             const wishes = [
                 "Wishing you great success and endless energy to crush all your goals this year!",
                 "May this year bring you awesome new adventures, growth, and great opportunities.",
-                "Keep working hard and staying focused—you are bound for great things!",
+                "Keep working hard and staying focused, you are bound for great things!",
                 "Here's to leveling up, learning new skills, and making this year your best one yet.",
                 "Hoping your days are filled with good company, great coffee, and zero stress."
             ];
@@ -651,7 +650,7 @@
                 }, 200);
             }
 
-            /* ================= MODALS, PREVIEW & HISTORY (BACK BUTTON) ================= */
+            /* ================= MODALS, PREVIEW & HISTORY ================= */
             function showAlert(text) {
                 document.getElementById('modal-text').innerText = text;
                 document.getElementById('custom-alert').classList.add('active');
