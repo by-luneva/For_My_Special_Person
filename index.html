@@ -24,13 +24,13 @@
     <style>
         /* ================= 1. GLOBAL & RESET ================= */
         * { box-sizing: border-box; margin: 0; padding: 0; overflow-wrap: break-word; word-wrap: break-word; -webkit-tap-highlight-color: transparent; outline: none !important; }
-        html, body { background-color: #0c183a; color: #F5F4F0; width: 100%; height: 100%; overflow: hidden; font-family: 'Cormorant Garamond', serif; -webkit-font-smoothing: antialiased; }
+        html, body { background-color: #310c0e; color: #F5F4F0; width: 100%; height: 100%; overflow: hidden; font-family: 'Cormorant Garamond', serif; -webkit-font-smoothing: antialiased; }
         a, button, input, .orbit-item, .polaroid-frame, .track { outline: none !important; }
 
         /* ================= 2. LAYOUT & SCREENS ================= */
-        #app-wrapper { position: relative; width: 100%; height: 100%; background: radial-gradient(circle at 50% 20%, #162a5f 0%, #0c183a 100%); overflow-y: hidden; overflow-x: hidden; -webkit-overflow-scrolling: touch; transform: translateZ(0); }
+        #app-wrapper { position: relative; width: 100%; height: 100%; background: radial-gradient(circle at 50% 20%, #521519 0%, #310c0e 100%); overflow-y: hidden; overflow-x: hidden; -webkit-overflow-scrolling: touch; transform: translateZ(0); }
         #app-wrapper.allow-scroll { overflow-y: auto; }
-        .screen { position: fixed; top: 0; left: 0; height: 100vh; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px; text-align: center; z-index: 20; overflow: hidden; background: radial-gradient(circle at center, #162a5f 0%, #0c183a 100%); }
+        .screen { position: fixed; top: 0; left: 0; height: 100vh; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px; text-align: center; z-index: 20; overflow: hidden; background: radial-gradient(circle at center, #521519 0%, #310c0e 100%); }
         .hidden { display: none !important; }
         .main-content { width: 100%; position: relative; z-index: 10; }
 
@@ -45,7 +45,7 @@
         .loading-bar-fill { width: 0%; height: 100%; background: #E7E2CE; border-radius: 2px; box-shadow: 0 0 10px #E7E2CE; transition: width 0.15s ease; will-change: width; }
 
         /* ================= 4. PIN SCREEN & KEYPAD ================= */
-        #screen-pin { background: radial-gradient(circle at center, #182e68 0%, #0c183a 100%); }
+        #screen-pin { background: radial-gradient(circle at center, #5b1a1f 0%, #310c0e 100%); }
         .pin-container { background: rgba(255, 255, 255, 0.04); padding: 35px 18px 18px 18px; border-radius: 35px; backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border: 1px solid rgba(231, 226, 206, 0.2); box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), inset 0 0 25px rgba(231, 226, 206, 0.04); max-width: 320px; width: 90%; display: flex; flex-direction: column; align-items: center; position: relative; margin-top: 30px; }
         .cassette-wrapper { width: 62px; height: 62px; position: absolute; top: -31px; left: 50%; transform: translateX(-50%) translateZ(0); z-index: 20; }
         .cassette-img { width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 4px 15px rgba(231,226,206,0.4)); }
@@ -91,7 +91,7 @@
         h3 { font-family: 'Cinzel', serif; color: #E7E2CE; margin-bottom: 14px; font-weight: 500; font-size: 12pt; text-transform: uppercase; letter-spacing: 2px; text-align: center; text-shadow: 0 0 14px rgba(231,226,206,0.4); }
 
         /* ================= 7. UNIVERSE / ORBIT SYSTEM ================= */
-        .orbit-system-container { position: relative; width: 100%; aspect-ratio: 1 / 1; max-width: 320px; margin: 25px auto 18px auto; background: radial-gradient(circle at center, rgba(22, 42, 95, 0.5) 0%, rgba(12, 24, 58, 0) 75%); border-radius: 50%; overflow: hidden; }
+        .orbit-system-container { position: relative; width: 100%; aspect-ratio: 1 / 1; max-width: 320px; margin: 25px auto 18px auto; background: radial-gradient(circle at center, rgba(82, 21, 25, 0.5) 0%, rgba(49, 12, 14, 0) 75%); border-radius: 50%; overflow: hidden; }
         .orbit-rotator-wrapper { position: absolute; width: 100%; height: 100%; top: 0; left: 0; animation: orbitSpin 45s linear infinite; }
         @keyframes orbitSpin { 100% { transform: rotate(360deg); } }
         .orbit-item { position: absolute; background: none; border: none; display: flex; flex-direction: column; align-items: center; cursor: pointer; transform: translate(-50%, -50%) scale(0); opacity: 0; transition: opacity 0.6s ease, transform 0.6s ease; z-index: 30; }
@@ -154,10 +154,10 @@
         
         .track { background: rgba(255,255,255,0.022); padding: 12px 14px; margin: 6px 0; border-radius: 12px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 10px; font-size: 8.5pt; font-family: 'Comfortaa', sans-serif; transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease; border: 1px solid transparent; }
         .track:hover { background: rgba(231, 226, 206, 0.09); border-color: rgba(231,226,206,0.22); }
-        .track.active { background: #E7E2CE; color: #112250; font-weight: bold; box-shadow: 0 0 18px rgba(231,226,206,0.6); }
+        .track.active { background: #E7E2CE; color: #310c0e; font-weight: bold; box-shadow: 0 0 18px rgba(231,226,206,0.6); }
         .track span:first-child { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align: left; }
         .track span:last-child { color: rgba(231, 226, 206, 0.65); font-size: 7.5pt; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align: right; max-width: 45%; }
-        .track.active span:last-child { color: #112250; }
+        .track.active span:last-child { color: #310c0e; }
 
         .cosmic-star-container { display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 30px 0 18px 0; position: relative; }
         .star-glow-ring { position: absolute; width: 105px; height: 105px; border-radius: 50%; background: radial-gradient(circle, rgba(231,226,206,0.3) 0%, transparent 70%); animation: ringPulse 2.5s ease-in-out infinite; pointer-events: none; }
@@ -174,7 +174,7 @@
         .jar-msg.active { opacity: 1; filter: blur(0); }
 
         /* ================= 10. MODALS & POPUPS ================= */
-        .modal-overlay, .preview-overlay, .closing-box-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(12, 24, 58, 0.85); display: flex; align-items: center; justify-content: center; z-index: 50000; opacity: 0; pointer-events: none; transition: opacity 0.25s ease, backdrop-filter 0.25s ease; will-change: opacity; }
+        .modal-overlay, .preview-overlay, .closing-box-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(49, 12, 14, 0.85); display: flex; align-items: center; justify-content: center; z-index: 50000; opacity: 0; pointer-events: none; transition: opacity 0.25s ease, backdrop-filter 0.25s ease; will-change: opacity; }
         .modal-overlay.active, .preview-overlay.active, .closing-box-overlay.active { opacity: 1; pointer-events: auto; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
         .custom-modal { background: rgba(255, 255, 255, 0.05); padding: 22px 18px 18px 18px; border-radius: 25px; border: 1px solid rgba(231, 226, 206, 0.25); box-shadow: 0 25px 55px rgba(0, 0, 0, 0.65); max-width: 280px; width: 85%; text-align: center; transform: scale(0.9) translateZ(0); opacity: 0; transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.25s ease; will-change: transform, opacity; }
         .modal-overlay.active .custom-modal { transform: scale(1) translateZ(0); opacity: 1; }
@@ -182,15 +182,15 @@
         .modal-btn { background: rgba(231, 226, 206, 0.12); border: 1px solid rgba(231, 226, 206, 0.35); color: #F5F4F0; font-family: 'Cinzel', serif; font-size: 9pt; padding: 7px 22px; border-radius: 18px; cursor: pointer; transition: background 0.2s; }
         .modal-btn:active { background: rgba(231, 226, 206, 0.35); }
         
-        .preview-card { background: rgba(20, 35, 75, 0.95); border: 1px solid rgba(231,226,206,0.35); padding: 14px 14px 20px 14px; border-radius: 16px; max-width: 90vw; max-height: 90vh; width: auto; position: relative; box-shadow: 0 28px 65px rgba(0,0,0,0.75); backdrop-filter: blur(14px); display: flex; flex-direction: column; align-items: center; }
+        .preview-card { background: rgba(55, 15, 18, 0.95); border: 1px solid rgba(231,226,206,0.35); padding: 14px 14px 20px 14px; border-radius: 16px; max-width: 90vw; max-height: 90vh; width: auto; position: relative; box-shadow: 0 28px 65px rgba(0,0,0,0.75); backdrop-filter: blur(14px); display: flex; flex-direction: column; align-items: center; }
         .preview-img-wrap { width: 100%; max-height: 72vh; overflow: auto; border-radius: 8px; background: transparent; display: flex; align-items: center; justify-content: center; }
         .preview-img-wrap img { width: auto; height: auto; max-width: 100%; max-height: 72vh; object-fit: contain; display: block; border-radius: 4px; }
         
-        .close-preview-btn { position: absolute; top: -14px; right: -14px; width: 32px; height: 32px; background: rgba(20,35,75,0.95); border: 1px solid rgba(231,226,206,0.45); color: #E7E2CE; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.45); transition: background 0.2s; z-index: 10; }
+        .close-preview-btn { position: absolute; top: -14px; right: -14px; width: 32px; height: 32px; background: rgba(55, 15, 18, 0.95); border: 1px solid rgba(231,226,206,0.45); color: #E7E2CE; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.45); transition: background 0.2s; z-index: 10; }
         .close-preview-btn:active { background: rgba(231, 226, 206, 0.35); }
         .btn-surprise { background: linear-gradient(135deg, rgba(231,226,206,0.28), rgba(255,255,255,0.07)); border: 1px solid rgba(231,226,206,0.5); color: #E7E2CE; padding: 14px 30px; border-radius: 25px; font-family: 'Cinzel', serif; font-size: 9.5pt; letter-spacing: 2px; cursor: pointer; box-shadow: 0 12px 35px rgba(0,0,0,0.45), inset 0 0 18px rgba(231,226,206,0.12); transition: all 0.3s ease; text-shadow: 0 0 10px rgba(231,226,206,0.45); will-change: transform; position: relative; z-index: 50; }
         .btn-surprise:hover { background: linear-gradient(135deg, rgba(231,226,206,0.38), rgba(255,255,255,0.14)); box-shadow: 0 18px 45px rgba(0,0,0,0.55), 0 0 25px rgba(231,226,206,0.45); border-color: rgba(231,226,206,0.8); transform: translateY(-2px) translateZ(0); }
-        .closing-card { background: rgba(20, 35, 75, 0.92); padding: 35px 20px; border-radius: 32px; border: 1px solid rgba(231,226,206,0.4); max-width: 290px; width: 85%; text-align: center; box-shadow: 0 28px 65px rgba(0,0,0,0.75), inset 0 0 28px rgba(231,226,206,0.06); backdrop-filter: blur(16px); }
+        .closing-card { background: rgba(55, 15, 18, 0.92); padding: 35px 20px; border-radius: 32px; border: 1px solid rgba(231,226,206,0.4); max-width: 290px; width: 85%; text-align: center; box-shadow: 0 28px 65px rgba(0,0,0,0.75), inset 0 0 28px rgba(231,226,206,0.06); backdrop-filter: blur(16px); }
         .closing-emoji { font-size: 38pt; margin-bottom: 12px; display: inline-block; filter: drop-shadow(0 0 12px rgba(231,226,206,0.6)); }
         .closing-card h2 { font-family: 'Cinzel', serif; color: #E7E2CE; text-shadow: 0 0 12px rgba(231,226,206,0.45); }
         .btn-close-box { background: rgba(255,255,255,0.07); border: 1px solid rgba(231,226,206,0.3); color: rgba(255,255,255,0.9); font-family: 'Comfortaa', sans-serif; font-size: 9.5pt; padding: 10px 28px; border-radius: 18px; cursor: pointer; transition: background 0.2s; }
