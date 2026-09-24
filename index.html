@@ -173,18 +173,20 @@
         .jar-msg { font-style: italic; color: #E7E2CE; font-size: 9.5pt; min-height: 42px; font-family: 'Comfortaa', sans-serif; margin-top: 16px; text-align: center; opacity: 0; filter: blur(5px); transition: opacity 0.5s ease, filter 0.5s ease; text-shadow: 0 0 10px rgba(231,226,206,0.45); will-change: opacity, filter; }
         .jar-msg.active { opacity: 1; filter: blur(0); }
 
-        /* ================= 10. MODALS & POPUPS ================= */
-        .modal-overlay, .preview-overlay, .closing-box-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(12, 24, 58, 0.8); display: flex; align-items: center; justify-content: center; z-index: 50000; opacity: 0; pointer-events: none; transition: opacity 0.25s ease, backdrop-filter 0.25s ease; will-change: opacity; }
+        /* ================= 10. MODALS & POPUPS (ADAPTIVE ORIGINAL SIZE PREVIEW) ================= */
+        .modal-overlay, .preview-overlay, .closing-box-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(12, 24, 58, 0.85); display: flex; align-items: center; justify-content: center; z-index: 50000; opacity: 0; pointer-events: none; transition: opacity 0.25s ease, backdrop-filter 0.25s ease; will-change: opacity; }
         .modal-overlay.active, .preview-overlay.active, .closing-box-overlay.active { opacity: 1; pointer-events: auto; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
         .custom-modal { background: rgba(255, 255, 255, 0.05); padding: 22px 18px 18px 18px; border-radius: 25px; border: 1px solid rgba(231, 226, 206, 0.25); box-shadow: 0 25px 55px rgba(0, 0, 0, 0.65); max-width: 280px; width: 85%; text-align: center; transform: scale(0.9) translateZ(0); opacity: 0; transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.25s ease; will-change: transform, opacity; }
         .modal-overlay.active .custom-modal { transform: scale(1) translateZ(0); opacity: 1; }
         .modal-msg { font-family: 'Comfortaa', sans-serif; font-size: 10pt; color: #E7E2CE; line-height: 1.5; margin-bottom: 18px; text-shadow: 0 0 6px rgba(231,226,206,0.35); }
         .modal-btn { background: rgba(231, 226, 206, 0.12); border: 1px solid rgba(231, 226, 206, 0.35); color: #F5F4F0; font-family: 'Cinzel', serif; font-size: 9pt; padding: 7px 22px; border-radius: 18px; cursor: pointer; transition: background 0.2s; }
         .modal-btn:active { background: rgba(231, 226, 206, 0.35); }
-        .preview-card { background: rgba(20, 35, 75, 0.9); border: 1px solid rgba(231,226,206,0.35); padding: 14px 14px 24px 14px; border-radius: 14px; max-width: 290px; width: 85%; position: relative; box-shadow: 0 28px 65px rgba(0,0,0,0.75); backdrop-filter: blur(14px); }
-        .preview-img-wrap { width: 100%; aspect-ratio: 1 / 1; overflow: hidden; border-radius: 8px; background: #000; }
-        .preview-img-wrap img { width: 100%; height: 100%; object-fit: contain; }
-        .close-preview-btn { position: absolute; top: -16px; right: -16px; width: 32px; height: 32px; background: rgba(20,35,75,0.95); border: 1px solid rgba(231,226,206,0.45); color: #E7E2CE; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.45); transition: background 0.2s; }
+        
+        .preview-card { background: rgba(20, 35, 75, 0.95); border: 1px solid rgba(231,226,206,0.35); padding: 14px 14px 20px 14px; border-radius: 16px; max-width: 90vw; max-height: 90vh; width: auto; position: relative; box-shadow: 0 28px 65px rgba(0,0,0,0.75); backdrop-filter: blur(14px); display: flex; flex-direction: column; align-items: center; }
+        .preview-img-wrap { width: 100%; max-height: 72vh; overflow: auto; border-radius: 8px; background: transparent; display: flex; align-items: center; justify-content: center; }
+        .preview-img-wrap img { width: auto; height: auto; max-width: 100%; max-height: 72vh; object-fit: contain; display: block; border-radius: 4px; }
+        
+        .close-preview-btn { position: absolute; top: -14px; right: -14px; width: 32px; height: 32px; background: rgba(20,35,75,0.95); border: 1px solid rgba(231,226,206,0.45); color: #E7E2CE; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.45); transition: background 0.2s; z-index: 10; }
         .close-preview-btn:active { background: rgba(231, 226, 206, 0.35); }
         .btn-surprise { background: linear-gradient(135deg, rgba(231,226,206,0.28), rgba(255,255,255,0.07)); border: 1px solid rgba(231,226,206,0.5); color: #E7E2CE; padding: 14px 30px; border-radius: 25px; font-family: 'Cinzel', serif; font-size: 9.5pt; letter-spacing: 2px; cursor: pointer; box-shadow: 0 12px 35px rgba(0,0,0,0.45), inset 0 0 18px rgba(231,226,206,0.12); transition: all 0.3s ease; text-shadow: 0 0 10px rgba(231,226,206,0.45); will-change: transform; position: relative; z-index: 50; }
         .btn-surprise:hover { background: linear-gradient(135deg, rgba(231,226,206,0.38), rgba(255,255,255,0.14)); box-shadow: 0 18px 45px rgba(0,0,0,0.55), 0 0 25px rgba(231,226,206,0.45); border-color: rgba(231,226,206,0.8); transform: translateY(-2px) translateZ(0); }
@@ -361,7 +363,7 @@
                     </div>
                 </section>
 
-                <!-- Wishes Section -->
+                <!-- Wishes Section (Updated with non-romantic, supportive English wishes) -->
                 <section>
                     <h3>Wishes From The Stars</h3>
                     <div class="cosmic-star-container" id="starContainer">
@@ -397,7 +399,7 @@
         <div class="preview-card" onclick="event.stopPropagation()">
             <div class="close-preview-btn" onclick="App.closePhotoPreview()">✕</div>
             <div class="preview-img-wrap"><img id="popup-img" src="" loading="lazy" alt=""></div>
-            <div id="popup-caption" style="font-style:italic; color:#E7E2CE; text-align:center; margin-top:15px;"></div>
+            <div id="popup-caption" style="font-style:italic; color:#E7E2CE; text-align:center; margin-top:12px;"></div>
         </div>
     </div>
 
@@ -434,7 +436,14 @@
                 { title: 'Ceritaku Ceritamu', artist: 'Katyana & Nadhif Basalamah', id: 't2', cover: 'Ceritaku Ceritamu.jpg', src: 'Katyana & Nadhif Basalamah - Ceritaku Ceritamu.mp3' },
                 { title: 'Kesima', artist: 'Weswey', id: 't3', cover: 'Weswey - Kesima.jpg', src: 'Weswey - Kesima.mp3' }
             ];
-            const wishes = ["May your heart always be filled with joy and laughter", "I hope all your dreams turn into reality soon", "Wishing you strength, health, and endless happiness", "May our story remain sweet through every chapter", "You are doing great, and I'm always proud of you"];
+            // Wishes diubah menjadi bahasa Inggris yang bernada suportif, keren, dan non-romantis
+            const wishes = [
+                "Wishing you great success and endless energy to crush all your goals this year!",
+                "May this year bring you awesome new adventures, growth, and great opportunities.",
+                "Keep working hard and staying focused—you are bound for great things!",
+                "Here's to leveling up, learning new skills, and making this year your best one yet.",
+                "Hoping your days are filled with good company, great coffee, and zero stress."
+            ];
             let wishIndex = 0;
             const audio = document.getElementById('bg-audio');
 
